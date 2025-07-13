@@ -1,0 +1,112 @@
+/* General Layout */
+.chat-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header */
+.chat-header {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* User Info */
+.chat-user-email {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* Chat Room Section */
+.chat-room {
+    margin-top: 1rem;
+}
+
+.chat-room h4 {
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+/* Input Area */
+.chat-input {
+    width: calc(100% - 110px);
+    padding: 0.75rem;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+}
+
+.chat-button {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.chat-button:hover {
+    background-color: #0056b3;
+}
+
+/* Messages List */
+.chat-messages {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* Date Header */
+.chat-date-header {
+    text-align: center;
+    color: #888;
+    font-weight: bold;
+    margin: 1rem 0 0.5rem;
+    font-size: 0.85rem;
+}
+
+/* Individual Message Styling */
+.chat-message {
+    margin: 0.5rem 0;
+    padding: 0.5rem 0.75rem;
+    max-width: 75%;
+    border-radius: 0.75rem;
+    word-wrap: break-word;
+    position: relative;
+    background-color: #f1f1f1;
+}
+
+/* Message Alignment */
+.chat-message-left {
+    align-self: flex-start;
+    background-color: #e9ecef;
+    margin-left: 0;
+    color : black;
+}
+
+.chat-message-right {
+    align-self: flex-end;
+    background-color: #dcf8c6;
+    margin-left: auto;
+    color: black;
+}
+
+/* Timestamp and Read Icon */
+.chat-time {
+    font-size: 0.75rem;
+    color: #999;
+    margin-top: 0.25rem;
+    text-align: right;
+}

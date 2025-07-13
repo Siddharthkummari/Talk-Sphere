@@ -1,0 +1,256 @@
+/* Reset and Base Styles */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg, #1f1c2c, #928dab);
+    color: white;
+    box-sizing: border-box;
+}
+
+/* Profile Page Layout */
+.profile-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem 1rem;
+}
+
+/* Profile Photo */
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 20px 0;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Welcome and Email Text */
+.profile-welcome {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+.profile-email {
+    font-size: 1.2rem;
+    opacity: 0.85;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Form Inputs with Black Text */
+.friend-input,
+.group-name-input,
+.friend-group-input {
+    padding: 0.6rem;
+    width: 260px;
+    max-width: 80%;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+    outline: none;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.friend-input::placeholder,
+.group-name-input::placeholder,
+.friend-group-input::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.friend-input:focus,
+.group-name-input:focus,
+.friend-group-input:focus {
+    background: white;
+    color: black;
+}
+
+/* Autofill Fix for Chrome */
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0.9) inset !important;
+    -webkit-text-fill-color: black !important;
+    caret-color: black;
+}
+
+/* Buttons */
+.friend-button,
+.create-group {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.friend-button {
+    background: #28a745;
+}
+
+.friend-button:hover {
+    background: #218838;
+    transform: translateY(-1px);
+}
+
+.create-group {
+    background: #ff9800;
+}
+
+.create-group:hover {
+    background: #e68900;
+    transform: translateY(-1px);
+}
+
+/* Friend Form */
+.friend-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+/* Friend List */
+.friend-list-section {
+    margin-top: 2.5rem;
+    width: 100%;
+    max-width: 600px;
+}
+
+.friend-list-section h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.friend-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.friend-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.8rem 1rem;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.friend-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Message Button */
+.message-button {
+    padding: 0.4rem 0.9rem;
+    background-color: #007bff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.message-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+}
+
+/* Group List */
+.group-list-section {
+    margin-top: 20px;
+    width: 300px;
+}
+
+.group-list-section h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.group-list {
+    list-style: none;
+    padding: 0;
+}
+
+.group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f5f5f5;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    color: black;
+}
+
+.group-item button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.group-item button:hover {
+    background-color: #45a049;
+}
+
+/* Group Form */
+.group-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 1.5rem;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 600px) {
+    .profile-welcome {
+        font-size: 2rem;
+    }
+
+    .friend-form {
+        flex-direction: column;
+    }
+
+    .friend-input,
+    .group-name-input,
+    .friend-group-input,
+    .friend-button,
+    .create-group {
+        width: 100%;
+    }
+
+    .friend-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .message-button {
+        margin-top: 8px;
+    }
+}
+
+.friend-input-row {
+    display: flex;
+    gap: 8px;
+    /* spacing between input and button */
+    align-items: center;
+}
